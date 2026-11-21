@@ -1,0 +1,12 @@
+chromadb
+docling
+langchain-chroma
+langchain-core
+langchain-huggingface
+langchain-openai
+langchain-text-splitters
+langgraph
+pydantic
+python-dotenv
+sentence-transformers
+streamlit

@@ -1,0 +1,136 @@
+[
+  {
+    "id": "RFP-01",
+    "question": "La plateforme supporte-t-elle un connecteur Apache Kafka natif ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["Kafka", "DEV-019"],
+    "expected_verdict": "DEV_SUR_MESURE",
+    "required_facts": ["Non supporté nativement", "DEV-019"]
+  },
+  {
+    "id": "RFP-02",
+    "question": "NovaFlow dispose-t-il de la certification HDS ou SecNumCloud ?",
+    "expected_doc_ids": ["DOC-05"],
+    "expected_terms_in_chunks": ["HDS", "SecNumCloud", "ISO 27001"],
+    "expected_verdict": "NON_SUPPORTE",
+    "required_facts": ["HDS non supporté", "SecNumCloud non supporté", "ISO 27001"]
+  },
+  {
+    "id": "RFP-03",
+    "question": "Comment sont signés les webhooks sortants de l'API v2 ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["HMAC-SHA256", "webhooks"],
+    "expected_verdict": "NATIF",
+    "required_facts": ["HMAC-SHA256"]
+  }
+  ,
+  {
+    "id": "RFP-04",
+    "category": "DEV_SUR_MESURE",
+    "question": "Est-il possible d'ajouter un connecteur vers SAP ERP avec synchronisation bidirectionnelle ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["SAP", "DEV-"],
+    "expected_verdict": "DEV_SUR_MESURE",
+    "required_facts": ["DEV-"]
+  },
+  {
+    "id": "RFP-05",
+    "category": "NATIF",
+    "question": "La plateforme gère-t-elle le SSO via SAML 2.0 ou OIDC ?",
+    "expected_doc_ids": ["DOC-05"],
+    "expected_terms_in_chunks": ["SAML", "OIDC", "SSO"],
+    "expected_verdict": "NATIF",
+    "required_facts": ["SSO"]
+  },
+  {
+    "id": "RFP-06",
+    "category": "DEV_SUR_MESURE",
+    "question": "Peut-on provisionner et désactiver automatiquement les comptes utilisateurs via SCIM 2.0 ?",
+    "expected_doc_ids": ["DOC-05"],
+    "expected_terms_in_chunks": ["SCIM"],
+    "expected_verdict": "DEV_SUR_MESURE",
+    "required_facts": ["SCIM"]
+  },
+  {
+    "id": "RFP-07",
+    "category": "NON_SUPPORTE",
+    "question": "L'application mobile fonctionne-t-elle en mode 100 % hors ligne sur iOS et Android ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["hors ligne", "offline", "mobile"],
+    "expected_verdict": "NON_SUPPORTE",
+    "required_facts": ["hors ligne"]
+  },
+  {
+    "id": "RFP-08",
+    "category": "NATIF",
+    "question": "Y a-t-il une limite de débit (rate limit) sur l'API REST et comment est-elle signalée ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["rate", "429", "API"],
+    "expected_verdict": "NATIF",
+    "required_facts": ["API"]
+  },
+  {
+    "id": "RFP-09",
+    "category": "SECURITE_CONFORMITE",
+    "question": "Les données sont-elles chiffrées au repos et en transit ? Quels protocoles sont utilisés ?",
+    "expected_doc_ids": ["DOC-05"],
+    "expected_terms_in_chunks": ["AES", "TLS", "chiffrement"],
+    "expected_verdict": "NATIF",
+    "required_facts": ["chiffrement"]
+  },
+  {
+    "id": "RFP-10",
+    "category": "DEV_SUR_MESURE",
+    "question": "Existe-t-il un export automatisé quotidien vers Snowflake ou BigQuery ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["Snowflake", "BigQuery", "DEV-"],
+    "expected_verdict": "DEV_SUR_MESURE",
+    "required_facts": ["DEV-"]
+  },
+  {
+    "id": "RFP-11",
+    "category": "NON_SUPPORTE",
+    "question": "NovaFlow permet-il un déploiement on-premise sur les propres serveurs du client ?",
+    "expected_doc_ids": ["DOC-05"],
+    "expected_terms_in_chunks": ["on-premise", "hébergement", "SaaS"],
+    "expected_verdict": "NON_SUPPORTE",
+    "required_facts": ["on-premise"]
+  },
+  {
+    "id": "RFP-12",
+    "category": "NATIF",
+    "question": "Dispose-t-on d'un journal d'audit (audit log) traçant les connexions et modifications ?",
+    "expected_doc_ids": ["DOC-05"],
+    "expected_terms_in_chunks": ["audit", "journal", "logs"],
+    "expected_verdict": "NATIF",
+    "required_facts": ["audit"]
+  },
+  {
+    "id": "RFP-13",
+    "category": "PIEGE_CODE_EXACT",
+    "question": "Quelle est la faisabilité et la charge associée au développement DEV-017 ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["DEV-017"],
+    "expected_verdict": "DEV_SUR_MESURE",
+    "required_facts": ["DEV-017"]
+  },
+  {
+    "id": "RFP-14",
+    "category": "PIEGE_SYNONYME",
+    "question": "Le système permet-il de notifier un service externe en temps réel quand un événement se produit ?",
+    "expected_doc_ids": ["DOC-04"],
+    "expected_terms_in_chunks": ["webhook", "événement", "API"],
+    "expected_verdict": "NATIF",
+    "required_facts": ["webhook"]
+  },
+  {
+    "id": "RFP-15",
+    "category": "PIEGE_HORS_PERIMETRE",
+    "question": "NovaFlow inclut-il un module natif de paie et de gestion des congés RH ?",
+    "expected_doc_ids": ["DOC-04", "DOC-05"],
+    "expected_terms_in_chunks": [],
+    "expected_verdict": "NON_SUPPORTE",
+    "required_facts": ["non"]
+  }
+
+]
